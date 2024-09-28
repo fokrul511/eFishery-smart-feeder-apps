@@ -1,6 +1,5 @@
 import 'package:efishery_smart_feeder_apps/presentation/utility/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart' as badges;
 
 int _cartItemsNo = 3;
 

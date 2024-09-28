@@ -10,22 +10,22 @@ class CardDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Back"),
+        title: const Text("Back"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             _buildContainerTitleCard(),
-            SizedBox(height: 16),
-            TitleHeaderSection(
+            const SizedBox(height: 16),
+            const TitleHeaderSection(
               title: "List Fidder",
               buttonTitle: ' Add Fedder',
               icons: Icons.add_circle_outline_outlined,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildFullCardDitailsCard(),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildfinalLastCard(),
           ],
         ),
@@ -62,7 +62,7 @@ class CardDetailsScreen extends StatelessWidget {
                     color: CustomColor.primaryColor,
                   ),
                 ),
-                Text(
+                const Text(
                   "27/09/2024",
                   style: TextStyle(
                     fontSize: 16,
@@ -108,16 +108,16 @@ class CardDetailsScreen extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 4,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 2),
           ),
         ],
       ),
       child: Column(
         children: [
           _buildPlayCard(),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           _buildInfoHeader(),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           _buildInformationSection()
         ],
       ),
@@ -135,7 +135,7 @@ class CardDetailsScreen extends StatelessWidget {
               title: 'Pool Info',
               subTitle: "Title",
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             _buildColumnTextWidgets(
@@ -151,7 +151,7 @@ class CardDetailsScreen extends StatelessWidget {
               title: 'Feed type',
               subTitle: "teraPangu",
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             _buildColumnTextWidgets(
@@ -170,15 +170,15 @@ class CardDetailsScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          title ?? "",
-          style: TextStyle(
+          title ,
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w300,
           ),
         ),
         Text(
-          subTitle ?? '',
-          style: TextStyle(
+          subTitle ,
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
@@ -205,13 +205,13 @@ class CardDetailsScreen extends StatelessWidget {
             children: [
               TextButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.settings),
-                label: Text("Settings"),
+                icon: const Icon(Icons.settings),
+                label: const Text("Settings"),
               ),
               TextButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.vertical_shades_closed_sharp),
-                label: Text("Schedule"),
+                icon: const Icon(Icons.vertical_shades_closed_sharp),
+                label: const Text("Schedule"),
               ),
             ],
           )
@@ -237,7 +237,7 @@ class CardDetailsScreen extends StatelessWidget {
               radius: 25,
               percent: 0.63,
               progressColor: CustomColor.primaryColor,
-              center: Text("63%"),
+              center: const Text("63%"),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -299,13 +299,13 @@ class CardDetailsScreen extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 4,
-              offset: Offset(0, 2)),
+              offset: const Offset(0, 2)),
         ],
       ),
       child: Column(
         children: [
           Card(
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(10),
                   topLeft: Radius.circular(10),
@@ -314,15 +314,15 @@ class CardDetailsScreen extends StatelessWidget {
               margin: EdgeInsets.zero,
               color: CustomColor.primaryColor,
               child: Container(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 height: 60,
                 width: double.maxFinite,
-                child: Text(
+                child: const Text(
                   "Title",
                   style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
               )),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(

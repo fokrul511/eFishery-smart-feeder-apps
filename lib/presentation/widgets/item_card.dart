@@ -19,13 +19,13 @@ class ItemCard extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 4,
-              offset: Offset(0, 2)),
+              offset: const Offset(0, 2)),
         ],
       ),
       child: Column(
         children: [
           Card(
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(10),
                 topLeft: Radius.circular(10),
@@ -42,8 +42,8 @@ class ItemCard extends StatelessWidget {
                     width: 200,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
+                const Padding(
+                  padding: EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -77,7 +77,7 @@ class ItemCard extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(

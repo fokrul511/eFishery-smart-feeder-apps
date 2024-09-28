@@ -1,7 +1,4 @@
 import 'package:efishery_smart_feeder_apps/presentation/utility/colors.dart';
-import 'package:efishery_smart_feeder_apps/presentation/views/edit_schedule_screen.dart';
-import 'package:efishery_smart_feeder_apps/presentation/views/fidder_schedule_screen.dart';
-import 'package:efishery_smart_feeder_apps/presentation/views/home_screen.dart';
 import 'package:efishery_smart_feeder_apps/presentation/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 

@@ -29,7 +29,7 @@ class FidderScheduleScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => EditScheduleScreen(),
+                        builder: (context) => const EditScheduleScreen(),
                       ),
                     );
                   },
