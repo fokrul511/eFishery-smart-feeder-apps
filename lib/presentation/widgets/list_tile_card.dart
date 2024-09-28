@@ -1,9 +1,21 @@
 import 'package:efishery_smart_feeder_apps/presentation/utility/colors.dart';
 import 'package:efishery_smart_feeder_apps/presentation/views/card_details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class ListTileCard extends StatelessWidget {
+  final String title;
+  final String feeders;
+  final String weight;
+  final double percentage;
+  final int centerValue;
+
   const ListTileCard({
+    required this.title,
+    required this.feeders,
+    required this.weight,
+    required this.percentage,
+    required this.centerValue,
     super.key,
   });
 
@@ -15,51 +27,35 @@ class ListTileCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => CardDetailsScreen(),
+              builder: (context) => const CardDetailsScreen(),
             ),
           );
         },
         title: Text(
-          'Title',
+          title,
           style: TextStyle(color: CustomColor.primaryColor),
         ),
-        subtitle: const Row(
+        subtitle: Row(
           children: [
-            Text(
-              "Text1 ",
-            ),
-            Text(
-              'Text2',
-            ),
+            Text(feeders),
+            const Text(' . '),
+            Text(weight),
           ],
         ),
         leading: Icon(
           Icons.water_sharp,
           color: CustomColor.primaryColor,
         ),
-        trailing: Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.white,
-              ),
-              child: CircularProgressIndicator(
-                backgroundColor: Colors.white,
-                color: CustomColor.primaryColor,
-              ),
+        trailing: CircularPercentIndicator(
+          radius: 20,
+          percent: percentage,
+          center: Text(
+            centerValue.toString(),
+            style: TextStyle(
+              color: CustomColor.primaryColor,
             ),
-            Text(
-              '10',
-              style: TextStyle(
-                color: CustomColor.primaryColor,
-                fontSize: 18,
-              ),
-            )
-          ],
+          ),
+          progressColor: CustomColor.primaryColor,
         ),
       ),
     );
